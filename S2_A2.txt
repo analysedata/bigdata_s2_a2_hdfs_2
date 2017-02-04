@@ -1,5 +1,10 @@
-Create a file max-temp.txt in local FS:touch max-temp.txt*******************************************************************************
-Put some 10-15 records of date and temperature example: dd-mm-yyyy,temperatureExample: 10-01-1990,10 and 10-02-1991,20Use a program called vi to open the file:
+Create a file max-temp.txt in local FS:
+touch max-temp.txt
+*******************************************************************************
+Put some 10-15 records of date and temperature example: dd-mm-yyyy,temperature
+Example: 10-01-1990,10 and 10-02-1991,20
+
+Use a program called vi to open the file:
 vi max-temp.txt
 
 Type i to insert text into max-temp.txt:
@@ -15,11 +20,14 @@ Press Esc to save and return to command mode:
 Esc
 
 Type :wq to exit and close the vi program:
-:wqUse the cat program to see the contents of the file:
+:wq
+
+Use the cat program to see the contents of the file:
 cat
 
 *******************************************************************************
-Move this file to HDFS at /user/acadgild/hadoop. Use the put command to move the file to the HDFS file system:
+
+Move this file to HDFS at /user/acadgild/hadoop. Use the put command to move the file to the HDFS file system:
 hadoop fs -put max-temp.txt /user/acadgild/hadoop
 
 Use the ls command to check that the file has been moved:
